@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="tetris.css" />
+	<title> FTetris </title>
+</head>
+
+<body>
+
+	<div id="header">		
+		<h1>FTETRIS</h1>		
+	</div>
+	<audio id="audio" loop src="Tetris.mp3">		
+	</audio>
+	<p>
+		<canvas id="tela"> </canvas> <br>
+	</p>
+	
+	<div id="informacaojogo">
+			<p id="titulo">Dados da Partida</p>	
+			<div class="info"> <p id="clock1"><script>setTimeout(1000);</script></p> </div>
+			<div class="info"> <p id="pontuacao1"> </p> </div>
+			<div class="info"> <p id="linhaseliminadas"> </p> </div>
+			<div class="info"> <p id="dificuldade1"> </p> </div>
+			
+	</div>	
+	<div id="informacaojogo2">
+
+		<div id="botoes">	
+			<button id="Novo" class="meubotao" type="button" onclick="NovoJogo(1); play();">Iniciar Jogo 10x20</button>
+			<button id="Novo2" class="meubotao" type="button" onclick="NovoJogo(2); play();"> Iniciar Jogo 22x44</button><br/><br/>		
+			<button id="Novo3" class="meubotao" type="button" onclick="Pausar()">Pausar Jogo</button>
+			<button id="Novo4" class="meubotao" type="button" onclick="Retomar()">Retomar Jogo</button><br/><br/>
+		</div>
+
+		<p id="tituloranking">Ranking de Jogadores</p>
+		<table id="tabela" style="background-color:#F2F5A9">				
+				<tr>
+					<th>Jogador</th>
+					<th>Pontuação</th>
+					<th>Nível Atingido</th>
+					<th>Duração</th>
+				</tr>
+		</table>	
+	<script src="ftetris.js"> </script>
+	</div>
+</body>
+</html>
